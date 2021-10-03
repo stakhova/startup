@@ -1,0 +1,289 @@
+@media only screen and ( max-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1380px) {
+
+}
+
+@media only screen and ( max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 1090px) {
+
+  .works-item{
+    max-width: 320px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .section{
+    padding: 50px 0;
+  }
+  .works-item{
+    max-width: 250px;
+    max-height: 200px ;
+  }
+  .client-logo{
+    padding-bottom: 50px;
+  }
+  .client-logo img{
+    margin: 0 20px;
+    max-width: 120px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team-text{
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .team-next, .team-prev{
+    top: 35%;
+  }
+  .team-items{
+    padding-top: 25px;
+  }
+  .contact-row{
+    padding-bottom: 10px;
+  }
+  .contact-row input:first-child{
+    margin-right: 20px;
+  }
+  .client-logo img{
+    margin: 0 15px;
+    max-width: 90px;
+  }
+  .blog-date{
+    margin-right: 15px;
+    height: 60px;
+  }
+
+  .blog-img{
+    height: max-content;
+  }
+  .paralax-title{
+    font-size: 24px;
+  }
+  .paralax-title p:nth-child(2){
+    padding: 5px 0 20px 0;
+  }
+  .paralax-button{
+    padding:  7px 20px;
+  }
+  .works-item{
+    max-width: 200px;
+    max-height: 160px ;
+  }
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .services-desc{
+    font-size: 12px;
+  }
+  .services-name{
+    padding: 15px 0;
+  }
+  .services-icon{
+    width: 70px;
+    height: 70px;
+  }
+  .burger{
+    display: block;
+  }
+  .header-menu{
+    display: none;
+  }
+  .header-menu{
+    display: none;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    padding-top: 70px;
+    padding-right: 15px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    transition: left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 2;
+    li{
+      padding: 5px 0;
+    }
+    &.animate{
+      display: block;
+      right: 0;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+  .header-title{
+    padding: 80px 0;
+    h1{
+      font-size: 36px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+  .header-button{
+    margin: 10px 0;
+  }
+
+
+}
+@media only screen and (max-width: 650px) {
+  .team-next, .team-prev{
+    width: 30px;
+    height: 30px;
+  }
+  .client-logo img{
+    margin: 0 10px;
+    max-width: 70px;
+  }
+  .works-item{
+    max-width: 160px;
+    max-height: 130px ;
+  }
+  .blog-item{
+    flex-direction: column;
+  }
+  .blog-img{
+    margin: 0 auto;
+    //margin-bottom: 20px;
+    max-height: 300px;
+    height: 100%;
+    img{
+      max-height: 300px;
+    }
+  }
+  .blog-readmore{
+    padding-top: 20px;
+  }
+  .blog-title{
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .contact-data{
+    width: 100%;
+  }
+  .contact-block{
+    flex-direction: column;
+  }
+  .blog-desc{
+    max-width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 503px) {
+  .works-item{
+    max-width: 125px;
+    max-height: 90px ;
+  }
+  .works-list{
+    padding: 40px 0;
+  }
+  .works-list li{
+    padding: 0px 6px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .team-text{
+    line-height: 14px;
+  }
+  .contact-form input,.contact-form span{
+    padding: 10px;
+  }
+  .team-next, .team-prev{
+    width: 25px;
+    height: 25px;
+  }
+  .footer-social::after {
+    top: 50px;
+  }
+    .client-logo img{
+    margin: 0 5px;
+    max-width: 60px;
+  }
+  .client-logo{
+    padding-bottom: 30px;
+  }
+  .client-citation__author{
+    padding: 25px 0;
+    font-size: 18px;
+  }
+  .blog-author p{
+    margin-top: 10px;
+  }
+  .paralax-title{
+    font-size: 20px;
+  }
+  .works-item{
+    max-width: 120px;
+    max-height: 90px ;
+  }
+  .services-items {
+    padding-top: 0;
+  }
+  .header-title{
+    padding: 40px 0;
+    h1{
+      font-size: 26px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+  .header-button span{
+    padding: 10px 20px;
+  }
+  .section-title_name{
+    font-size: 18px;
+  }
+  .section-title_desc{
+    font-size: 14px;
+    padding: 25px 10px;
+    text-align: center;
+
+  }
+  .section-title_name:after{
+    top: 35px;
+  }
+  .team-item p{
+    padding-top: 5px;
+  }
+  .team-name{
+    font-size: 13px;
+  }
+  .team-pos{
+    font-size: 10px;
+  }
+  .works-item{
+    margin-bottom: 20px;
+    max-width: 118px;
+    max-height: 80px ;
+  }
+  .client-citation__text{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .client-logo img{
+    margin: 0 5px;
+    max-width: 50px;
+  }
+  .works-item{
+    max-width: 95px;
+    max-height: 80px;
+  }
+  .header-title h1{
+    font-size: 24px;
+  }
+  .works-list li{
+    font-size: 12px;
+  }
+
+}
+@media only screen and (max-width: 320px) {
+
+}
