@@ -22,6 +22,9 @@
 // }
 
 
+
+
+
 $('.multiple-items').slick({
     infinite: true,
     slidesToShow: 4,
