@@ -18,7 +18,7 @@
 }
 @media only screen and (max-width: 980px) {
   .section{
-    padding: 50px 0;
+    padding: 30px 0;
   }
   .works-item{
     max-width: 250px;
@@ -44,9 +44,9 @@
   .team-next, .team-prev{
     top: 35%;
   }
-  .team-items{
-    padding-top: 25px;
-  }
+  //.team-items{
+  //  padding-top: 25px;
+  //}
   .contact-row{
     padding-bottom: 10px;
   }
@@ -134,6 +134,9 @@
 
 }
 @media only screen and (max-width: 650px) {
+  .team-social{
+    bottom: 10%;
+  }
   .team-next, .team-prev{
     width: 30px;
     height: 30px;
@@ -178,6 +181,9 @@
 
 
 @media only screen and (max-width: 503px) {
+  .team-social{
+    display: none!important;
+  }
   .services-desc {
     line-height: 16px;
   }
