@@ -1,5 +1,83 @@
 
 
+// переміщення
+// let corX, corY
+// let square =  document.querySelectorAll(".enter-item")
+// square.forEach(box=>{
+//     box.onmousedown = function(e){
+//
+//         corX = e.screenX - box.getBoundingClientRect().x
+//         corY = e.screenY - box.getBoundingClientRect().y
+//         box.addEventListener("mousemove", move)
+//     }
+//     function move(e){
+//         box.style.position = "fixed"
+//         box.style.left = e.screenX - corX + "px"
+//         box.style.top = e.screenY - corY + "px"
+//     }
+//     box.onmouseup = function (){
+//         box.removeEventListener("mousemove", move)
+//     }
+// })
+
+let activeBox=null
+let square =  document.querySelectorAll(".enter-item")
+square.forEach(box=>{
+    box.addEventListener('dragstart',function (event){
+        setTimeout(()=>{
+            this.style.display='none'
+        },0)
+        activeBox=event.target
+
+    })
+    box.addEventListener('dragend',function (event){
+        setTimeout(()=>{
+            this.style.display='block'
+        },0)
+    })
+})
+//
+let borders = document.querySelectorAll('.enter-item_br')
+borders.forEach(br=>{
+    console.log(br)
+    br.addEventListener('dragenter',function (event){
+        event.preventDefault()
+        br.style.backgroundColor="grey"
+    })
+    br.addEventListener('dragover',function (event){
+        event.preventDefault()
+        // br.style.backgroundColor="grey"
+    })
+    br.addEventListener('dragleave',function (event){
+        // event.preventDefault()
+        br.style.backgroundColor="transparent"
+    })
+    br.addEventListener('drop',function (event){
+        // event.preventDefault()
+        br.appendChild(activeBox)
+        check()
+        console.log(event)
+    })
+})
+
+
+function check(){
+    let bingo=0
+    square.forEach(box=>{
+        console.log("ddddddsffsdfs"+box)
+        if(!box.closest('.enter-item_br')) return false
+        if(box.closest('.enter-item_br').getAttribute('data-color') == box.getAttribute('data-color')){
+            console.log("bingo")
+            bingo++
+        }else return false
+        if(bingo==4){
+            document.querySelector('.enter-corr').style.visibility='visible'
+
+        }
+    })
+
+
+}
 
 // let corX,corY
 // let square =  document.querySelectorAll(".enter-item")
@@ -16,7 +94,7 @@
 // }
 // square.addEventListener('mousedown',drag)
 //
-// function move(){
+// function move(event){
 //     square.style.top = event.pageY - corX + "px"
 //     square.style.left = event.pageX- corY + "px"
 // }
@@ -33,7 +111,23 @@ $('.multiple-items').slick({
 });
 
 
+// animate block
+function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.classList.add('element-show');
+        }
+    });
+}
 
+let options = {
+    threshold: [0.2]};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+    observer.observe(elm);
+}
 
 
 
@@ -56,10 +150,38 @@ let up = function () {
             }, 10);
         }
     };
+    // let topscroll = function () {
+    //     let scrButHref = this.href.slice((this.href.indexOf('#')+1))
+    //     let elemToScroll = document.getElementById(scrButHref).getBoundingClientRect().y
+    //
+    //     topscrollFinish(elemToScroll,scrButHref)
+    //     console.log(scrButHref)
+    // };
+    //  function topscrollFinish (elemToScroll,scrButHref){
+    //      if(Math.abs(pageYOffset - elemToScroll) > 100 ) {
+    //          if (pageYOffset > elemToScroll) {
+    //              setTimeout(function () {
+    //                  window.scrollTo(0, window.scrollY - 100);
+    //                  topscrollFinish();
+    //              }, 10);
+    //          }
+    //      }else window.scrollTo(0, elemToScroll);
+    // }
+
     window.addEventListener('scroll', btnVisible);
     btnTop.addEventListener('click', topscroll);
 };
 up();
+
+let menuItem = document.querySelectorAll('.header-menu a')
+function Scroll(){
+    menuItem.forEach(item=>{
+        console.log( item.href.slice((item.href.indexOf('#')+1)))
+        menuItem.addEventListener("click", Scroll)
+    })
+}
+
+
 
 // local storage userValue
 function userValue(){
@@ -179,10 +301,10 @@ document.querySelector('.triple').addEventListener('click', function (evt) {
          for (let i = 0; i < name.length; i++) {
              console.log(name)
                 console.log(evt.target)
-                name[0].textContent = 'Hack';
-                name[1].textContent = 'This';
-                name[2].textContent = 'Site!';
-                name[i].style.color = "red";
+                name[0].textContent = 'Hello';
+                name[1].textContent = 'My';
+                name[2].textContent = 'Friend!';
+                name[i].style.color = "#c0301c";
                 name[i].style.fontWeight = "bold";
                 throttle = true;
                 setTimeout(function () {
@@ -229,6 +351,13 @@ document.querySelector('.burger').addEventListener('click', function(){
         document.body.style.overflow = "auto"
     }
 });
+document.querySelectorAll('.header-menu li').forEach(item=>{
+    item.addEventListener('click', function(){
+        burger.classList.remove('burger-active')
+        menu.classList.remove('animate')
+        document.body.style.overflow = "auto"
+    });
+})
 
 
 

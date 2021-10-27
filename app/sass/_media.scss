@@ -34,6 +34,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .slick-next{
+    right: 9px;
+  }
   .team-text{
     font-size: 12px;
     line-height: 20px;
@@ -175,6 +178,9 @@
 
 
 @media only screen and (max-width: 503px) {
+  .services-desc {
+    line-height: 16px;
+  }
   .works-item{
     max-width: 125px;
     max-height: 90px ;
@@ -184,6 +190,11 @@
   }
   .works-list li{
     padding: 0px 6px;
+  }
+  .slick-next, .slick-prev{
+    width: 20px;
+    height: 20px;
+    top:35%
   }
 }
 
